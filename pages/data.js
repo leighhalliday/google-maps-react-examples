@@ -22,7 +22,7 @@ const mapOptions = {
   mapId: process.env.NEXT_PUBLIC_MAP_ID,
 };
 
-function Data() {
+export default function Data() {
   const [mapContainer, setMapContainer] = useState(null);
   const mapRef = useCallback((node) => setMapContainer(node), []);
   const onLoad = useCallback((map) => addZoneLayer(map), []);
@@ -41,8 +41,6 @@ function Data() {
     </GoogleMapProvider>
   );
 }
-
-export default Data;
 
 function addZoneLayer(map) {
   if (map.getMapCapabilities().isDataDrivenStylingAvailable) {
