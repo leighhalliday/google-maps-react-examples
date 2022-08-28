@@ -16,7 +16,7 @@ const mapOptions = {
   },
 };
 
-export default function Cluster() {
+function Cluster() {
   const [mapContainer, setMapContainer] = useState(null);
   const mapRef = useCallback((node) => setMapContainer(node), []);
   const onLoad = useCallback((map) => addMarkers(map), []);
@@ -32,6 +32,8 @@ export default function Cluster() {
     </GoogleMapProvider>
   );
 }
+
+export default Cluster;
 
 function addMarkers(map) {
   const infoWindow = new google.maps.InfoWindow({});

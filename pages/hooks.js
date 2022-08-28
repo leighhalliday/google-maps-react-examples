@@ -24,7 +24,7 @@ const mapOptions = {
   },
 };
 
-export default function Hooks() {
+function Hooks() {
   const [mapContainer, setMapContainer] = useState(null);
   const mapRef = useCallback((node) => setMapContainer(node), []);
 
@@ -39,6 +39,8 @@ export default function Hooks() {
     </GoogleMapProvider>
   );
 }
+
+export default Hooks;
 
 function Location() {
   const [lat, setLat] = useState(43.68);

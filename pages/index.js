@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function App() {
+function App() {
   return (
     <ul>
       <li>
@@ -15,3 +15,5 @@ export default function App() {
     </ul>
   );
 }
+
+export default App;
